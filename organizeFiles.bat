@@ -1,5 +1,5 @@
 @echo off
-set /p "dir=Enter Dirctory: "
+set /p "dir=Enter the full dirctory path in which the files exist: "
 set /p "count=Enter count of chars to build new directories: "
 set count = %count%
 setlocal enabledelayedexpansion
