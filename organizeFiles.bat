@@ -19,13 +19,13 @@ for /r %%I in (*) do (
     @REM echo filename is !filename!
     @REM echo folder to make is !newDir!
     set newFullPath= %dir%\!newDir!
-    if not exist newFullPath mkdir !newDir!
+    if not exist newFullPath mkdir !newDir! 2>nul
     @REM echo new full path is:  !newFullPath!
     set source= !fullPath!
     set destin= !newFullPath!\!fileName!
     @REM echo source is !source!
     @REM echo destin is !destin!
-    copy !source! !destin!
+    copy !source! !destin! >nul
 ) 
 echo _
 echo DONE SUCCESSFULLY...
